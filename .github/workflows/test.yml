@@ -27,16 +27,16 @@ jobs:
           export NAME=Mathias
           echo the $NAME !
   
-    deploy:
-      runs-on: unbuntu-latest
+  deploy:
+    runs-on: unbuntu-latest
 
-      needs: build-test
+    needs: build-test
 
-      steps:
-        - uses: actions/checkout@v3
+    steps:
+      - uses: actions/checkout@v3
 
-        - uses: akhileshns/heroku-deploy@v3.12.12
-          with:
-            heroku_api_key: ${{secrets.HEROKU_API_kEY}}
-            heroku_app_name: "joke-app-iw1"
-            heroku-email: "keligbrindeau@gmail.com"
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_kEY}}
+          heroku_app_name: "joke-app-iw1"
+          heroku-email: "keligbrindeau@gmail.com"
