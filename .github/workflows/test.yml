@@ -20,7 +20,7 @@ jobs:
         run: npm test
       
       - name: build
-        run: npm build
+        run: npm run build
 
       - name: Echo the name
         run: |
